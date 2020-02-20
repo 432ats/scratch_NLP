@@ -1,5 +1,5 @@
 import sys
-sys.path.append('..')
+sys.path.append('/Users/ats432/projects/Matsuzaki_lab/DeepLearning_Scratch_NLP')
 from dataset import ptb
 
 corpus, word_to_id, id_to_word = ptb.load_data('train')

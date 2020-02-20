@@ -1,7 +1,7 @@
 import sys
-sys.path.append('..')
+sys.path.append('/Users/ats432/projects/Matsuzaki_lab/DeepLearning_Scratch_NLP')
 import numpy as np 
-from common.util import preprocess, create_co_matrix, cos_similarity, most_similarity
+from common.util import preprocess, create_co_matrix, cos_similarity, most_similar
 
 text = 'You say goodbye and I say hello.'
 #コーパスの前処理
@@ -20,4 +20,4 @@ c1 = C[word_to_id['i']]   #"i"の単語ベクトル
 print("類似度(コサイン類似度):\n{0}".format(cos_similarity(c0,c1)))
 
 #類似度ランキング
-most_similarity('you', word_to_id, id_to_word, C, top=5)
+most_similar('you', word_to_id, id_to_word, C, top=5)

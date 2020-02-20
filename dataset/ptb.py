@@ -1,7 +1,7 @@
 # coding: utf-8
 import sys
 import os
-sys.path.append('..')
+sys.path.append('/Users/ats432/projects/Matsuzaki_lab/DeepLearning_Scratch_NLP')
 try:
     import urllib.request
 except ImportError:
