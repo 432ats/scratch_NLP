@@ -1,6 +1,7 @@
 import sys
 sys.path.append('..')
 import numpy as np 
+#from common.np import *
 
 #コーパスの前処理
 def preprocess(text):
@@ -187,3 +188,17 @@ def clip_grads(grads, max_norm):
     if rate < 1:
         for grad in grads:
             grad *= rate
+
+
+def to_cpu(x):
+    import numpy
+    if type(x) == numpy.ndarray:
+        return x
+    return np.asnumpy(x)
+
+
+def to_gpu(x):
+    import cupy
+    if type(x) == cupy.ndarray:
+        return x
+    return cupy.asarray(x)
